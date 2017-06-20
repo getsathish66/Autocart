@@ -89,10 +89,11 @@ public class MycartDAOImpl implements MycartDAO {
 		
 		}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Mycart> list() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return sessionFactory.getCurrentSession().createQuery("from Mycart").list();
 	}
 
 	@Override
@@ -129,7 +130,15 @@ public class MycartDAOImpl implements MycartDAO {
 		return false;
 	}
 
-	
+	@SuppressWarnings("unchecked")
+	@Transactional
+	public List<Mycart> listCartByStatus(String id, String status) {
+
+		return sessionFactory.getCurrentSession()
+				.createQuery("from Mycart where id=" + "'" + id + "' " + "  and status = " + "'" + status + "'")
+				.list();
+
+	}
 
 	
 	

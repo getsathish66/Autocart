@@ -23,6 +23,8 @@ public interface MycartDAO {
 
 	public boolean itemAlreadyExist(String mail, String productId, boolean b);
 	
+	public List<Mycart> listCartByStatus(String id, String status);
+	
 
 
 }

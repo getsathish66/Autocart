@@ -27,7 +27,7 @@ public class Mycart {
 	private String status;
 	private int sid;
 	private int days;
-	
+	private String id;
 	
 	public int getCartid() {
 		return cartid;
@@ -96,6 +96,16 @@ public class Mycart {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	
+	
+	
 	
 	
 
